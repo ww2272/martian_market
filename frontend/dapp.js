@@ -1,5 +1,5 @@
 // @TODO: Update this address to match your deployed MartianMarket contract!
-const contractAddress = "0x5701780f65da79e296EF822A4B209926C21ab953";
+const contractAddress = "0xAC3E55EeD34efDB64263434918B8873a72A73e6f";
 
 const dApp = {
   ethEnabled: function() {
@@ -59,7 +59,7 @@ const dApp = {
     $("#dapp-tokens").html("");
     this.tokens.forEach((token) => {
       try {
-        let endAuction = `<a id="${token.tokenId}" class="dapp-admin" style="display:none;" href="#" onclick="dApp.endAuction(event)">End Auction</a>`;
+        let endAuction = `<a id="${token.tokenId}" class="dapp-admin" style="display:none;" href="#" onclick="dApp.endAuction(this)">End Auction</a>`;
         let bid = `<a id="${token.tokenId}" href="#" onclick="dApp.bid(event);">Bid</a>`;
         let owner = `Owner: ${token.owner}`;
         let withdraw = `<a id="${token.tokenId}" href="#" onclick="dApp.withdraw(event)">Withdraw</a>`
